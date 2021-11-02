@@ -1,0 +1,30 @@
+{
+  "name": "1cak",
+  "version": "1.0.0",
+  "description": "Unofficial API for Scrape MEME from 1cak.com",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AthallahDzaki/1CAK.git"
+  },
+  "keywords": [
+    "1CAK",
+    "Scrape",
+    "Axios",
+    "Meme",
+    "Indonesia"
+  ],
+  "author": "athallahdzaki",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/AthallahDzaki/1CAK/issues"
+  },
+  "homepage": "https://github.com/AthallahDzaki/1CAK#readme",
+  "dependencies": {
+    "axios": "^0.24.0",
+    "cheerio": "^1.0.0-rc.10"
+  }
+}
