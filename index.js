@@ -59,7 +59,6 @@ exports.GetPostID = async function (id)
 async function GetPosts(url)
 {
   let postingan = [];
-  console.log(url);
   let data = await axios.get(url).then(res => res.data).catch(e => Error(e));
   if(IsNotFound(data)) throw Error("Post not found")
   let $ = cheerio.load(data);
@@ -82,7 +81,6 @@ async function GetPosts(url)
   postingan.pop(); // Pop For Remove Undefined
   let next = $("#next_page_link").attr("href")
 	let nextSplit = next.split("-")
-  console.log(nextSplit)
   if(nextSplit.length > 3) throw Error("index out of range");
 
   p = {

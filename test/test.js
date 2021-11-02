@@ -1,3 +1,5 @@
 const API = require('1cak');
 
-console.log(API.Search());
+(async() => {
+    console.log(await API.Search());
+})()
