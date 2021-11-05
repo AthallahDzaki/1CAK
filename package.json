@@ -1,6 +1,6 @@
 {
   "name": "1cak",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Unofficial API for Scrape MEME from 1cak.com",
   "main": "index.js",
   "scripts": {
