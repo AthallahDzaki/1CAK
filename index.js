@@ -34,7 +34,7 @@ exports.Search = function (query, pageid = 0)
 exports.GetPostID = async function (id)
 {
   let url;
-  if(id == ""){
+  if(id == "" || id == undefined){
     url = BaseURL + "/shuffle";
   } else {
     url = BaseURL + "/" + id;
