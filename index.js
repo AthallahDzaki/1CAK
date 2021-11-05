@@ -45,7 +45,7 @@ exports.GetPostID = async function (id)
   let $ = cheerio.load(data);
   let string = $(".fb-comments").attr("data-href");
   let pid = string.split('/')[3]; // Post iD
-  return {
+  let p = {
     "id" : pid,
     "title" : $("h3").text(),
     "nsfw" : false, // Ignore That
@@ -53,6 +53,8 @@ exports.GetPostID = async function (id)
     "url" : string,
     "votes" : $("#span_vote_" + pid).text()
   }
+  p = JSON.stringify(p);
+  return p;
 }
 
 // Static Definition And Always Used
@@ -83,11 +85,13 @@ async function GetPosts(url)
 	let nextSplit = next.split("-")
   if(nextSplit.length > 3) throw Error("index out of range");
 
-  p = {
+  let p = {
     page : {
       next : nextSplit[1]
     }, post : postingan
   }
+
+  p = JSON.stringify(p);
   return p;
 }
 
